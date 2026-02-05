@@ -51,6 +51,44 @@ body {
 	bottom: 0;
 	z-index: 1;
 }
+.piloto-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 1rem 0 2rem 0;
+	margin: 0;
+}
+
+.imagem-piloto {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.imagem-piloto img {
+	width: auto;
+	height: 300px;
+	border-radius: 5px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.badge-piloto {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #e50914;
+	color: white;
+	padding: 8px 16px;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 3px;
+	white-space: nowrap;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
 .conteudo {
 	position: relative;
@@ -107,6 +145,54 @@ body {
 	background-color: #ccc;
 }
 
+/* Contador */
+#juntos {
+	padding: 2rem 1rem;
+	margin: 0 1rem;
+	border-radius: 5px;
+}
+
+.contador h1 {
+	margin-top: 1rem;
+	font-size: 20px;
+	text-shadow: none;
+}
+
+#contadorDias {
+	display: flex;
+	gap: 15px;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#contadorDias span {
+	font-size: 14px;
+	color: #ccc;
+}
+
+#contadorDias span[id] {
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+}
+
+.badge-piloto{
+	font-size: 11px;
+	bottom: 12px;
+	letter-spacing: 0.5px;
+
+}
+.imagem-piloto img {
+	height: 250px;
+	margin: 0;
+	display: block;
+}
+.continuar{
+	padding: 2rem 1rem;
+	font-size: 20px;
+	margin-block-start: 1rem; ;
+}
 /* Momentos */
 .momentos {
 	padding: 2rem 1rem;
@@ -309,4 +395,80 @@ footer {
 		font-size: 18px;
 	}
 }
+.contador {
+  background: linear-gradient(135deg, #141414, #1c1c1c);
+  border: 1px solid #e50914;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 10px;
+}
 
+.contador h1 {
+  font-size: 18px;
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+#contadorDias {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#contadorDias span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+#contadorDias span + span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+@media (max-width: 480px) {
+  #contadorDias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: center;
+  }
+
+  #contadorDias span {
+    font-size: 26px;
+  }
+}
+.secao-titulo {
+	font-size: 22px;
+	margin: 0 0 15px 0;
+	padding-left: -1rem;
+	text-align: left;
+}
+
+/* alinhar títulos de seção à esquerda como 'Nossos Momentos' */
+.momentos h2,
+.linda h2,
+.wishlist h2 {
+	padding-left: 1rem;
+	text-align: left;
+}
+
+/* alinhar piloto e seu container com o padding das seções */
+.piloto-container {
+	padding-left: 1rem;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.juntos-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* garante alinhamento à esquerda */
+.contador {
+  margin: 0;
+}
