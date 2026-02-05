@@ -148,7 +148,7 @@ body {
 /* Contador */
 #juntos {
 	padding: 2rem 1rem;
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 .contador {
@@ -477,3 +477,4 @@ footer {
 .contador {
   margin: 0;
 }
+
