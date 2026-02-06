@@ -214,6 +214,7 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 	border-radius: 0;
 	text-align: left;
 	font-size: 20px;
+	padding-top: 40px;
 }
 
 .contador h1 {
@@ -574,4 +575,5 @@ footer {
   pointer-events: none;
   z-index: 9999;
 }
+
 
