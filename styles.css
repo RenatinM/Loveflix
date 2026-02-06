@@ -15,7 +15,7 @@ body {
 }
 
 #netflix-intro.active {
-  display: flex;
+  display: flex; 
 }
 
 #netflix-intro .logo {
@@ -196,31 +196,19 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 }
 
 
-.contador {
-	padding: 20px;
-	margin: 0 auto;
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	max-width: 500px;
-	background: linear-gradient(135deg, #141414, #1c1c1c);
-	border: 1px solid #e50914;
-}
-.secao-titulo {
-	padding: 1rem 1rem;
-	margin: 0;
-	border-radius: 0;
-	text-align: left;
-	font-size: 20px;
-	padding-top: 40px;
-}
 
-.contador h1 {
-	margin-top: 0rem;
-	font-size: 20px;
-	text-shadow: none;
+.contador {
+padding: 1rem 1rem; 
+display: flex; 
+position: relative;
+
+flex-direction: column; 
+align-items: center; 
+text-align: center; 
+background: linear-gradient(135deg, #141414, #1d1d1d); 
+border: 1px solid #e50914; 
+margin: 0 2rem 0 2rem;
+border-radius: 10px;
 }
 
 #contadorDias {
@@ -229,6 +217,7 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 	margin-top: 1rem;
 	flex-wrap: wrap;
 	align-items: center;
+
 }
 
 #contadorDias span {
@@ -243,7 +232,6 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 	font-weight: bold;
 }
 
-
 .continuar{
 	padding: 2rem 1rem;
 	font-size: 20px;
@@ -256,7 +244,7 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 
 .momentos h2 {
 	margin-top: 1rem;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 /* Swiper */
@@ -283,12 +271,16 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 
 .linda h2 {
 	margin-top: 1rem;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 /* Lista */
 .wishlist {
 	padding: 1rem;
+}
+.wishlist h2 {
+	margin-top: 1rem;
+	font-size: 22px;
 }
 
 .imagem-lista {
@@ -385,7 +377,7 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 	background: none;
 	border: none;
 	color: white;
-	font-size: 24px;
+	font-size: 4;
 	cursor: pointer;
 	transition: color 0.3s;
 }
@@ -396,7 +388,7 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 
 .modal-header h2 {
 	margin: 0 0 20px 0;
-	font-size: 28px;
+	font-size: 24px;
 	font-family: "Great Vibes", cursive;
 	color: #e50914;
 }
@@ -451,18 +443,13 @@ footer {
 		font-size: 18px;
 	}
 }
-.contador {
-  background: linear-gradient(135deg, #141414, #1c1c1c);
-  border: 1px solid #e50914;
-  padding: 20px;
-  max-width: 500px;
-  border-radius: 10px;
-}
+
 
 .contador h1 {
   font-size: 18px;
   color: #e50914;
   margin-bottom: 10px;
+  margin-top: 0rem;
 }
 
 #contadorDias {
@@ -497,16 +484,14 @@ footer {
   }
 }
 .secao-titulo {
-	font-size: 22px;
-	margin: 0 0 15px 0;
-	padding-left: 1rem;
-	text-align: left;
+  padding: 1rem 1rem 0;
+  font-size: 22px;
+  text-align: left;
 }
-
 /* alinhar títulos de seção à esquerda como 'Nossos Momentos' */
 .momentos h2,
 .linda h2,
-.wishlist h2 {
+.wishlist h2,{
 	padding-left: 1rem;
 	text-align: left;
 }
@@ -518,12 +503,6 @@ footer {
   gap: 30px;
   align-items: flex-start;
 }
-
-/* garante alinhamento à esquerda */
-.contador {
-  margin: 0;
-}
-
 
 @keyframes te-amo-main {
   0% {
@@ -575,5 +554,3 @@ footer {
   pointer-events: none;
   z-index: 9999;
 }
-
-
