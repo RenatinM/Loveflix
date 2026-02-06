@@ -76,7 +76,7 @@ body {
 }
 .imagem-piloto::after{
 	content: '';
-	position: absolute;
+	position: absolute;	
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -489,3 +489,53 @@ footer {
 }
 
 
+@keyframes te-amo-main {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes te-amo-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.5);
+  }
+}
+
+@keyframes te-amo-rain {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes love-pulse {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.heart-explosion {
+  position: fixed;
+  font-size: 2rem;
+  animation: te-amo-float 2s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
