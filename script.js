@@ -67,4 +67,87 @@ document.addEventListener('DOMContentLoaded', () => {
       fecharModal();
     }
   });
+
+const btnFavorito = document.getElementById('btnFavorito');
+
+// animação épica "TE AMO"
+function createTeAmoAnimation() {
+  const teAmoTexts = [
+    'TE AMO ❤️',
+    '💖 TE AMO MUITO 💖',
+    'EU TE AMO!',
+    '❤️ MEU AMOR ❤️',
+    'TE AMO PARA SEMPRE!',
+    '💕 VOCÊ É TUDO 💕',
+    'MEU CORAÇÃO É SEU!',
+    '🥰 TE AMO DEMAIS 🥰'
+  ];
+
+  // Animação central principal
+  const mainTeAmo = document.createElement('div');
+  mainTeAmo.innerHTML = 'TE AMO ❤️';
+  mainTeAmo.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; font-weight: bold; background: linear-gradient(45deg, #ff0040, #ffd700, #ff0040); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; z-index: 9999; pointer-events: none; animation: te-amo-main 4s ease-out forwards; text-shadow: 0 0 30px rgba(255, 0, 64, 0.8); filter: drop-shadow(0 0 20px rgba(255, 0, 64, 1));';
+  document.body.appendChild(mainTeAmo);
+  setTimeout(() => mainTeAmo.remove(), 4000);
+
+  // Múltiplos "TE AMO" flutuantes
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => {
+      const teAmo = document.createElement('div');
+      const randomText = teAmoTexts[Math.floor(Math.random() * teAmoTexts.length)];
+      teAmo.innerHTML = randomText;
+      const startX = Math.random() * window.innerWidth;
+      const startY = Math.random() * window.innerHeight;
+      teAmo.style.cssText = `position: fixed; left: ${startX}px; top: ${startY}px; font-size: ${ (Math.random() * 2 + 1.5).toFixed(2) }rem; font-weight: bold; color: ${Math.random() > 0.5 ? '#ff0040' : '#ffd700'}; z-index: 9998; pointer-events: none; animation: te-amo-float 3s ease-out forwards; text-shadow: 0 0 15px rgba(255, 0, 64, 0.8); filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));`;
+      document.body.appendChild(teAmo);
+      setTimeout(() => teAmo.remove(), 3000);
+    }, i * 200);
+  }
+
+  // Chuva de "TE AMO" pequenos
+  for (let i = 0; i < 15; i++) {
+    setTimeout(() => {
+      const miniTeAmo = document.createElement('div');
+      miniTeAmo.innerHTML = '💖 TE AMO';
+      miniTeAmo.style.cssText = `position: fixed; left: ${Math.random() * 100}%; top: -50px; font-size: 1.2rem; color: #ff0040; z-index: 9997; pointer-events: none; animation: te-amo-rain ${ (Math.random() * 3 + 2).toFixed(2) }s linear forwards; text-shadow: 0 0 10px rgba(255, 0, 64, 0.6);`;
+      document.body.appendChild(miniTeAmo);
+      setTimeout(() => miniTeAmo.remove(), 5000);
+    }, i * 150);
+  }
+
+  // Efeito de pulso na tela
+  const pulseOverlay = document.createElement('div');
+  pulseOverlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255, 0, 64, 0.1), transparent); z-index: 9996; pointer-events: none; animation: love-pulse 2s ease-in-out;';
+  document.body.appendChild(pulseOverlay);
+  setTimeout(() => pulseOverlay.remove(), 2000);
+}
+
+// Explosão de corações vermelhos
+function createHeartExplosion() {
+  const hearts = ['❤️', '💖', '💕', '💗', '💓', '💝', '♥️', '💘'];
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart-explosion';
+      heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = Math.random() * window.innerHeight + 'px';
+      heart.style.color = Math.random() > 0.5 ? '#ff0040' : '#ffd700';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 2000);
+    }, i * 100);
+  }
+}
+
+if (btnFavorito) {
+  btnFavorito.addEventListener('click', () => {
+    createTeAmoAnimation();
+    createHeartExplosion();
+
+    // efeito visual no botão
+    btnFavorito.classList.add('ativo');
+    setTimeout(() => btnFavorito.classList.remove('ativo'), 600);
+  });
+}
+
 });
