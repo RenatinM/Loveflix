@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="cabecalho">
         <div class="logo" id="secao1">
-            <img src="Logonetflix.png" alt="Logo Netflix" width="50px">
+            <img src="Logonetflix.png" alt="Logo Netflix" width="50px" onclick="playNetflixIntro()">
         </div>
         <nav>
             <a href="#secao1">Início</a>
@@ -22,6 +25,10 @@
             <a href="#secao4">Minha Lista</a>
         </nav>
     </header>
+
+    <div id="netflix-intro">
+  <span class="logo">NETFLIX</span>
+</div>
 
     <section class="banner">
         <div class="conteudo">
