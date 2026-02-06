@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('segundos').textContent = segundos;
   };
 
+function playNetflixIntro() {
+  const intro = document.getElementById("netflix-intro");
+  const logo = intro.querySelector(".logo");
+
+  // Reset animação
+  logo.style.animation = "none";
+  logo.offsetHeight; // força reflow
+  logo.style.animation = "";
+
+  intro.classList.add("active");
+
+  setTimeout(() => {
+    intro.classList.remove("active");
+  }, 3000);
+}
+  window.playNetflixIntro = playNetflixIntro;
+  // tocar a intro automaticamente ao carregar o site
+  try { playNetflixIntro(); } catch (e) { /* não bloquear se algo der errado */ }
   atualizarContador();
   setInterval(atualizarContador, 1000);
 
