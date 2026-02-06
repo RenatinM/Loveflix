@@ -195,11 +195,6 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 	background-color: #ccc;
 }
 
-/* Contador */
-#juntos {
-	padding: 2rem 1rem;
-	margin-top: 1rem;
-}
 
 .contador {
 	padding: 20px;
@@ -214,7 +209,7 @@ background: linear-gradient(to top, rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.349));
 	border: 1px solid #e50914;
 }
 .secao-titulo {
-	padding: 0 0 1rem 1rem;
+	padding: 1rem 1rem;
 	margin: 0;
 	border-radius: 0;
 	text-align: left;
@@ -579,3 +574,4 @@ footer {
   pointer-events: none;
   z-index: 9999;
 }
+
