@@ -4,7 +4,47 @@ body {
 	background-color: black;
 	color: white;
 }
+#netflix-intro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
 
+#netflix-intro.active {
+  display: flex;
+}
+
+#netflix-intro .logo {
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: 'bebas neue', cursive;
+  color: #e50914;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: netflixIntro 3s ease forwards;
+}
+
+@keyframes netflixIntro {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}  
 /* Cabeçalho */
 .cabecalho {
 	background-color: #141414;
