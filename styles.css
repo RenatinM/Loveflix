@@ -554,7 +554,54 @@ footer {
   pointer-events: none;
   z-index: 9999;
 }
+#overlay-continuar {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
 
+#overlay-continuar.active {
+  display: flex;
+}
 
+.overlay-content {
+  width: 100%;
+  max-width: 390px; 
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
 
+#overlay-text {
+	font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  color: white;
+  margin-top: 120px;
+  animation: fadeInText 2s ease forwards;
+}
 
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#media-container {
+  margin-top: 40px;
+}
+
+#media-container img,
+#media-container video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
