@@ -572,7 +572,7 @@ footer {
   width: 100%;
   max-width: 390px; 
   height: 100%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -595,13 +595,13 @@ footer {
   }
 }
 
-#media-container {
-  margin-top: 40px;
+#media-container {	
+  margin-top: 30px;
 }
 
 #media-container img,
 #media-container video {
   width: 100%;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
