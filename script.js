@@ -253,4 +253,3 @@ function iniciarSequencia() {
 }
 btnContinuar.addEventListener('click', iniciarSequencia);
 });
-
