@@ -230,7 +230,7 @@ function iniciarSequencia() {
     mediaContainer.innerHTML = `
       <p style="
         font-family: 'Great Vibes', cursive;
-        font-size: 40px;
+        font-size: 26px;
         margin-top: 40px;
         color: #fff;
         animation: fadeInText 2s ease forwards;
@@ -253,3 +253,4 @@ function iniciarSequencia() {
 }
 btnContinuar.addEventListener('click', iniciarSequencia);
 });
+
