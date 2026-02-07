@@ -491,7 +491,7 @@ footer {
 /* alinhar títulos de seção à esquerda como 'Nossos Momentos' */
 .momentos h2,
 .linda h2,
-.wishlist h2,{
+.wishlist h2, {
 	padding-left: 1rem;
 	text-align: left;
 }
