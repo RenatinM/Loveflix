@@ -20,6 +20,7 @@ function playNetflixIntro() {
   const intro = document.getElementById("netflix-intro");
   const logo = intro.querySelector(".logo");
 
+  // Reset animação
   logo.style.animation = "none";
   logo.offsetHeight; // força reflow
   logo.style.animation = "";
@@ -31,6 +32,7 @@ function playNetflixIntro() {
   }, 3000);
 }
   window.playNetflixIntro = playNetflixIntro;
+  // tocar a intro automaticamente ao carregar o site
   try { playNetflixIntro(); } catch (e) { /* não bloquear se algo der errado */ }
   atualizarContador();
   setInterval(atualizarContador, 1000);
@@ -86,6 +88,7 @@ function playNetflixIntro() {
 
 const btnFavorito = document.getElementById('btnFavorito');
 
+// animação épica "TE AMO"
 function createTeAmoAnimation() {
   const teAmoTexts = [
     'TE AMO ❤️',
@@ -98,12 +101,14 @@ function createTeAmoAnimation() {
     '🥰 TE AMO DEMAIS 🥰'
   ];
 
+  // Animação central principal
   const mainTeAmo = document.createElement('div');
   mainTeAmo.innerHTML = 'TE AMO ❤️';
   mainTeAmo.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; font-weight: bold; background: linear-gradient(45deg, #ff0040, #ffd700, #ff0040); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; z-index: 9999; pointer-events: none; animation: te-amo-main 4s ease-out forwards; text-shadow: 0 0 30px rgba(255, 0, 64, 0.8); filter: drop-shadow(0 0 20px rgba(255, 0, 64, 1));';
   document.body.appendChild(mainTeAmo);
   setTimeout(() => mainTeAmo.remove(), 4000);
 
+  // Múltiplos "TE AMO" flutuantes
   for (let i = 0; i < 8; i++) {
     setTimeout(() => {
       const teAmo = document.createElement('div');
@@ -117,6 +122,7 @@ function createTeAmoAnimation() {
     }, i * 200);
   }
 
+  // Chuva de "TE AMO" pequenos
   for (let i = 0; i < 15; i++) {
     setTimeout(() => {
       const miniTeAmo = document.createElement('div');
@@ -127,12 +133,14 @@ function createTeAmoAnimation() {
     }, i * 150);
   }
 
+  // Efeito de pulso na tela
   const pulseOverlay = document.createElement('div');
   pulseOverlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255, 0, 64, 0.1), transparent); z-index: 9996; pointer-events: none; animation: love-pulse 2s ease-in-out;';
   document.body.appendChild(pulseOverlay);
   setTimeout(() => pulseOverlay.remove(), 2000);
 }
 
+// Explosão de corações vermelhos
 function createHeartExplosion() {
   const hearts = ['❤️', '💖', '💕', '💗', '💓', '💝', '♥️', '💘'];
   for (let i = 0; i < 30; i++) {
@@ -154,6 +162,7 @@ if (btnFavorito) {
     createTeAmoAnimation();
     createHeartExplosion();
 
+    // efeito visual no botão
     btnFavorito.classList.add('ativo');
     setTimeout(() => btnFavorito.classList.remove('ativo'), 600);
   });
@@ -176,6 +185,7 @@ function iniciarSequencia() {
   function mostrarMidia() {
     mediaContainer.innerHTML = '';
 
+    // acabou a sequência
     if (index >= mediaSequencia.length) {
       finalizarSequencia();
       return;
@@ -230,6 +240,7 @@ function iniciarSequencia() {
       </p>
     `;
 
+    // fecha sozinho depois de alguns segundos
     setTimeout(() => {
       overlay.classList.remove('active');
       document.body.style.overflow = 'auto';
@@ -237,11 +248,9 @@ function iniciarSequencia() {
     }, 6000);
   }
 
+  // espera o texto inicial
   setTimeout(mostrarMidia, 2500);
 }
 btnContinuar.addEventListener('click', iniciarSequencia);
-});
-
-  
 });
 
