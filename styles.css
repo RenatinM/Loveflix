@@ -578,7 +578,7 @@ footer {
 
 #overlay-text {
 	font-family: 'Great Vibes', cursive;
-  font-size: 40px;
+  font-size: 26px;
   color: white;
   margin-top: 120px;
   animation: fadeInText 2s ease forwards;
@@ -603,5 +603,6 @@ footer {
 #media-container video {
   width: 100%;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+
 }
