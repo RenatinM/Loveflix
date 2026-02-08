@@ -177,9 +177,8 @@ const mediaSequencia = [
   { type: 'image', src: '14.jpeg' },
   { type: 'image', src: '20.jpeg' },
   { type: 'image', src: '17.jpeg' },
-  { type: 'video', src: 'video1.mp4' },
   { type: 'image', src: '18.jpeg' },
-
+  { type: 'image', src: '21.jpeg' },
 ];
 function iniciarSequencia() {
   overlay.classList.add('active');
@@ -202,7 +201,7 @@ function iniciarSequencia() {
       const img = document.createElement('img');
       img.src = item.src;
       img.style.opacity = '0';
-      img.style.transition = 'opacity 1s';
+      img.style.transition = 'opacity 2s';
 
       mediaContainer.appendChild(img);
 
@@ -221,7 +220,6 @@ function iniciarSequencia() {
     video.playsInline = true;
     video.muted = true; // OBRIGATÓRIO no iPhone
     video.controls = false;
-
 const tentarPlay = () => {
   video.play().catch(() => {
     // se falhar, pula após 3s
@@ -232,16 +230,7 @@ const tentarPlay = () => {
   });
 };
 
-// tenta assim que entra no DOM
-setTimeout(tentarPlay, 200);
 
-// fallback ABSOLUTO (caso nada funcione)
-setTimeout(() => {
-  if (video.paused) {
-    index++;
-    mostrarMidia();
-  }
-}, 5000);
 
 // quando o vídeo terminar
 video.onended = () => {
@@ -252,7 +241,6 @@ video.onended = () => {
       mediaContainer.appendChild(video);
     }
   }
-
   function finalizarSequencia() {
     mediaContainer.innerHTML = `
       <p style="
