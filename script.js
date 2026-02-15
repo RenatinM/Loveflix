@@ -179,6 +179,7 @@ const mediaSequencia = [
   { type: 'image', src: '17.jpeg' },
   { type: 'image', src: '18.jpeg' },
   { type: 'image', src: '21.jpeg' },
+  { type: 'image', src: '25.jpeg' },
 ];
 function iniciarSequencia() {
   overlay.classList.add('active');
@@ -268,3 +269,4 @@ video.onended = () => {
 }
 btnContinuar.addEventListener('click', iniciarSequencia);
 });
+
