@@ -251,8 +251,8 @@ video.onended = () => {
         color: #fff;
         animation: fadeInText 2s ease forwards;
       ">
-        Esse é só mais um episódio
-        e eu quero todas as próximas temporadas com você 
+        esse é só mais um episódio
+        e eu quero todas as próximas temporadas com Você 
       </p>
     `;
 
@@ -269,4 +269,5 @@ video.onended = () => {
 }
 btnContinuar.addEventListener('click', iniciarSequencia);
 });
+
 
