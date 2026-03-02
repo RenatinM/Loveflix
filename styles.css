@@ -273,6 +273,14 @@ border-radius: 10px;
 	margin-top: 1rem;
 	font-size: 22px;
 }
+.orgulho {
+	padding: 1rem;
+}
+
+.orgulho h2 {
+	margin-top: 1rem;
+	font-size: 22px;
+}
 
 /* Lista */
 .wishlist {
@@ -605,3 +613,4 @@ footer {
   border-radius: 10px;
   margin-top: 5px;
 }
+
