@@ -273,11 +273,13 @@ border-radius: 10px;
 	margin-top: 1rem;
 	font-size: 22px;
 }
+
+/* Orgulho */
 .orgulho {
-	padding: 1rem;
+	padding: 2rem 1rem ;
 }
 
-.orgulho h2 {
+.orgulho h2 {	
 	margin-top: 1rem;
 	font-size: 22px;
 }
@@ -499,6 +501,7 @@ footer {
 /* alinhar títulos de seção à esquerda como 'Nossos Momentos' */
 .momentos h2,
 .linda h2,
+.orgulho h2,
 .wishlist h2, {
 	padding-left: 1rem;
 	text-align: left;
@@ -613,4 +616,3 @@ footer {
   border-radius: 10px;
   margin-top: 5px;
 }
-
